@@ -9,14 +9,15 @@
 //   fib(4) === 3
 
 function fib(n) {
+    //Why create a for loop if you don't have to?
     if(n < 2){
         return n;
     }
-    const result = [0, 1];
+    const fibArrayBuilder = [0, 1];
     for (let index = 2; index <= n; index++){
-        result.push(result[index - 1] + result[index - 2]);
+        fibArrayBuilder.push(fibArrayBuilder[index - 1] + fibArrayBuilder[index - 2]);
     }
-    return result[n];
+    return fibArrayBuilder[n];
 }
 
 module.exports = fib;
