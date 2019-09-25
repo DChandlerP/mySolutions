@@ -5,6 +5,8 @@
 //   reverse('apple') === 'leppa'
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
-
-const result = reverse('Elijah')
-module.exports = reverse
+function reverse(string) {
+    return string.split("").reverse().join("")
+}
+const result = reverse('Elijah');
+module.exports = reverse;
